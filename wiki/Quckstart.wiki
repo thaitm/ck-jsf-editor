@@ -44,4 +44,5 @@ Here's a step by step description of how to get up and going.
 </f:view>
 </html>
 }}}
-[http://code.google.com/p/ck-jsf-editor/wiki/images/ckeditor-image.png]
+  # Your page should look like this:
+[http://ck-jsf-editor.googlecode.com/svn/wiki/images/ckeditor_image.png]
