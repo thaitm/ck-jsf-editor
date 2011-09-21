@@ -1,0 +1,30 @@
+/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+/* CHANGED for CKJsfEditor component.  Please see CHANGES.txt for a complete list of changes.
+*
+* Changed to work with jsf resource loading.
+*
+*/
+@import url("reset.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("mainui.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("panel.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("toolbar.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("menu.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("richcombo.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("elementspath.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("icons.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+@import url("presets.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama");
+
+/* Restore the container visibility */
+html .cke_skin_kama
+{
+	visibility: inherit;
+}
+
+html.cke_skin_kama_container
+{
+	visibility: visible;
+}

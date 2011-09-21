@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="ck-jsf-editor:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ck_jsf_editor</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ck-jsf-editor/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ck-jsf-editor" />
+          <element id="directory" name="META-INF">
+            <element id="dir-copy" path="$PROJECT_DIR$/src/META-INF" />
+          </element>
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jsf" />
+          <element id="library" level="project" name="gson" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
