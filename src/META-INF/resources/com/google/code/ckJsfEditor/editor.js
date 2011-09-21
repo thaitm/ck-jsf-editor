@@ -17,7 +17,8 @@
 
 /**
  * We need to override this in the global namespace before instantiating the editor instance.
- * @param resource
+ *
+ * @param resource The resource to translate into a url.
  */
 CKEDITOR_GETURL = function( resource ) {
     var i;
@@ -39,7 +40,7 @@ CKEDITOR_GETURL = function( resource ) {
         }
         jsfResource = jsfResource + '/';
     } else if(!jsfResource.match('/$')) {
-        i = resource.lastIndexOf('/')
+        i = resource.lastIndexOf('/');
         theResource = resource.substring(i + 1);
         jsfResource = jsfResource.substring(0, i);
         jsfResource = jsfResource.replace(".jsf", theResource + ".jsf");
@@ -94,51 +95,106 @@ function CKEditor(editorElement, config) {
     }
 }
 
+/**
+ * @return true if the editor contents have been changes since being loaded
+ */
 CKEditor.prototype.dirty = function() {
     return this.getEditor().checkDirty();
 };
 
+/**
+ * resets the dirty flag
+ */
 CKEditor.prototype.resetDirty = function() {
     this.getEditor().resetDirty();
 };
 
+/**
+ *
+ * @param width The width to set the editor to as an integer or css size value.
+ * @param height The height to set the editor to as an integer or css size value.
+ * @param isContentHeight {boolean} Optional argument indicating that the provided height is to be applied to the
+ * editor contents space, not to the entire editor interface. Defaults to false.
+ * @param resizeInner {boolean} Optional argument indicating that the first inner interface element must receive
+ * the size, not the outer element. The default theme defines the interface inside a pair of span
+ * elements (<span><span>...</span></span>). By default the first span element receives the sizes. If this parameter
+ * is set to true, the second span is sized instead.
+ */
 CKEditor.prototype.resize = function(width, height, isContentHeight, resizeInner) {
     this.getEditor().resize(width, height, isContentHeight, resizeInner);
 };
 
+/**
+ * @return The currently highlighted text
+ */
 CKEditor.prototype.getSelection = function() {
     return this.getEditor().getSelection();
 };
 
+/**
+ * @return The contents of the editor.
+ */
 CKEditor.prototype.getContents = function() {
     return this.getEditor().getData();
 };
 
+/**
+ * Sets the contents of the editor.
+ *
+ * @param data {String} HTML code to replace the current content in the editor.
+ * @param callback {Function} Optional function to be called after the setData is completed.
+ * @param internal {boolean} Optional argument indication whether to suppress any event firing when copying data
+ * internally inside the editor.
+ */
 CKEditor.prototype.setContents = function(data, callback, internal) {
     this.getEditor().setData(data, callback, internal);
     this.updateElement();
 };
 
+/**
+ * Inserts the html at the cursor in the editor.
+ *
+ * @param html {String} The html to insert.
+ */
 CKEditor.prototype.insertHtml = function(html) {
     this.getEditor().insertHtml(html);
 };
 
+/**
+ * Inserts the text at the cursor in the editor.
+ *
+ * @param text {String} The html to insert.
+ */
 CKEditor.prototype.insertText = function(text) {
     this.getEditor().insertText(text);
 };
 
+/**
+ * Switches the editor to source view.
+ */
 CKEditor.prototype.sourceView = function() {
     this.getEditor().setMode('source');
 };
 
+/**
+ * Switches the editor to wysiwyg view.
+ */
 CKEditor.prototype.wysiwygView = function() {
     this.getEditor().setMode('wysiwyg');
 };
 
+/**
+ * Inserts a new CKEDITOR.dom.element into the editor at the cursor.
+ *
+ * @param element {CKEDITOR.dom.element} The element to insert.
+ */
 CKEditor.prototype.insertElement = function(element) {
     return this.getEditor().insertElement(element);
 };
 
+/**
+ * Synchronizes the data from the editor into the textarea element it's replacing.
+ */
 CKEditor.prototype.updateElement = function() {
     this.getEditor().updateElement();
 };

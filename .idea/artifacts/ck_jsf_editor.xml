@@ -12,7 +12,9 @@
       <element id="directory" name="source">
         <element id="dir-copy" path="$PROJECT_DIR$/source" />
         <element id="directory" name="ckJsfEditor">
-          <element id="dir-copy" path="$PROJECT_DIR$/src/com" />
+          <element id="directory" name="com">
+            <element id="dir-copy" path="$PROJECT_DIR$/src/com" />
+          </element>
         </element>
       </element>
       <element id="file-copy" path="$PROJECT_DIR$/CHANGES.txt" output-file-name="ckeditor-CHANGES.txt" />
