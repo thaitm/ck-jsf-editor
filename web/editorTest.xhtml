@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ ck-jsf-editor is a JSF2 component for ckEditor (see http://ckeditor.com)
+  ~     Copyright (C) 2011  Bill Reh
+  ~     This program is free software: you can redistribute it and/or modify
+  ~     it under the terms of the GNU General Public License as published by
+  ~     the Free Software Foundation, either version 3 of the License, or
+  ~     (at your option) any later version.
+  ~
+  ~     This program is distributed in the hope that it will be useful,
+  ~     but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~     GNU General Public License for more details.
+  ~
+  ~     You should have received a copy of the GNU General Public License
+  ~     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ck="http://code.google.com/ck-jsf-editor"
+      xml:lang="en" lang="en">
+<f:view contentType="text/html">
+    <h:head>
+        <title>CKEditor JSF Component Test</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:messages id="messages" style="background-color: #aed0ea; border-radius: 10px; display: inline-block; padding-bottom: 5px; padding-top: 5px; padding-right: 10px;"/>
+            <ck:editor id="ckEd" value="#{editorTest.editorContents}" width="800px" widgetVar="eduardo" uiColor="#aed0ea"/>
+            <h:commandButton value="Reset" onclick="eduardo.setContents(''); return false;" styleClass="buttonStyle"/>
+            <span style="width: 590px; height: 10px; min-width: 590px; min-height: 10px;">&#160;</span>
+            <h:commandButton value="Save" actionListener="#{editorTest.save}">
+                <f:ajax render="messages" execute="ckEd"/>
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
