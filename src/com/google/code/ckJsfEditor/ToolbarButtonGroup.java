@@ -23,9 +23,32 @@ import java.util.Vector;
 import static com.google.code.ckJsfEditor.ToolbarItem.*;
 
 /**
- * User: billreh
- * Date: 9/17/11
- * Time: 5:16 PM
+ * <p>
+ *     {@link ToolbarItem}s are grouped into ToolbarButtonGroups, which are then put into the toolbar.
+ *     Each ToolbarButtonGroup object has a name and a list of ToolbarItems in it.
+ * </p>
+ *
+ * <p>
+ *     The ToolbarButtonGroup is populated with ToolbarItems via method chaining with the {@link #item(ToolbarItem)}
+ *     method.  For example, the {@link #DOCUMENT} ToolbarButtonGroup is created like this:
+ * </p>
+ * <p>
+ *     <code>
+ *         public static final ToolbarButtonGroup DOCUMENT = new ToolbarButtonGroup("document")<br/>
+ *              <span style="margin-left: 80px;">.item(SOURCE)</span><br/>
+ *              <span style="margin-left: 80px;">.item(SEPARATOR)</span><br/>
+ *              <span style="margin-left: 80px;">.item(SAVE)</span><br/>
+ *              <span style="margin-left: 80px;">.item(NEW_PAGE)</span><br/>
+ *              <span style="margin-left: 80px;">.item(DOC_PROPS)</span><br/>
+ *              <span style="margin-left: 80px;">.item(PREVIEW)</span><br/>
+ *              <span style="margin-left: 80px;">.item(PRINT)</span><br/>
+ *              <span style="margin-left: 80px;">.item(SEPARATOR)</span><br/>
+ *              <span style="margin-left: 80px;">.item(TEMPLATES);</span>
+ *     </code>
+ * </p>
+ *
+ *
+ * @author Bill Reh
  */
 public class ToolbarButtonGroup {
     public static final ToolbarButtonGroup DOCUMENT = new ToolbarButtonGroup("document")

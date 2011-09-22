@@ -230,6 +230,23 @@ public class Config {
         this.prettyPrint = prettyPrint;
     }
 
+    /**
+     * This method will turn the Config object into a CKEDITOR.config string representation.
+     *
+     * @return A json representation of the CKEDITOR.config object
+     */
+    public String toJson() {
+        if(isPrettyPrint())
+            return prettyGson.toJson(this, this.getClass());
+        else
+            return gson.toJson(this, this.getClass());
+    }
+
+    @Override
+    public String toString() {
+        return toJson();
+    }
+
     public Config autoGrowBottomSpace(Integer autoGrow_bottomSpace) {
         setAutoGrow_bottomSpace(autoGrow_bottomSpace);
         return this;
@@ -2091,12 +2108,5 @@ public class Config {
 
     private void setWidth(String width) {
         this.width = width;
-    }
-
-    public String toJson() {
-        if(isPrettyPrint())
-            return prettyGson.toJson(this, this.getClass());
-        else
-            return gson.toJson(this, this.getClass());
     }
 }

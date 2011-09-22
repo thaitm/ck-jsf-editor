@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DependencyValidationManager">
-    <scope name="ckscope" pattern="" />
+    <scope name="ckscope" pattern="src:com.google.code..*&amp;&amp;!src:com.google.code.ckJsfEditor.test..*" />
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="EntryPointsManager">
@@ -23,7 +23,7 @@
   </component>
   <component name="IdProvider" IDEtalkID="09124F65F0847E38B2D7F81745E9E36A" />
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/javadoc" />
     <option name="OPTION_SCOPE" value="protected" />
     <option name="OPTION_HIERARCHY" value="true" />
     <option name="OPTION_NAVIGATOR" value="true" />
