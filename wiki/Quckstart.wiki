@@ -1,5 +1,5 @@
 #summary Quickstart guide to working with ck-jsf-editor.
-#labels Featured,Phase-Deploy
+#labels Featured,Phase-Deploy,Phase-Implementation
 
 = Introduction =
 
@@ -10,7 +10,7 @@ ck-jsf-editor provides a ckeditor JSF 2.0 component.  To use it you just need to
 
 Here's a step by step description of how to get up and going.
   # Download the latest ck-jsf-editor.jar from [http://code.google.com/p/ck-jsf-editor/downloads/list]
-  # Copy the jar file to the WEB-INF/lib directory underneath your webroot.  You may also need to point your IDE at the jar file so that it recognizes the tag and classes.
+  # Copy the jar file to the WEB-INF/lib directory underneath your web root.  You may also need to point your IDE at the jar file so that it recognizes the tag and classes.
   # Include the namespace in your html declaration like so, The `xmlns:ck="http://code.google.com/ck-jsf-editor"` line is the one that imports the tag.:
 {{{
 <html xmlns="http://www.w3.org/1999/xhtml"
