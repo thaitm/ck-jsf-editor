@@ -1,10 +1,9 @@
 #summary Tag information for the editor tag.
 #labels Featured,Phase-Implementation
 
-= Introduction =
+= Editor =
 
-ck-jsf-editor provides a JSF component for ckeditor.
-
+The editor tag provides a JSF component for ckeditor.
 
 == Info ==
 || Tag || *editor* ||
