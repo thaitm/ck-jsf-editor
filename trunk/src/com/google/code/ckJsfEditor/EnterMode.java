@@ -18,13 +18,17 @@
 package com.google.code.ckJsfEditor;
 
 /**
-* User: billreh
-* Date: 9/17/11
-* Time: 4:58 PM
-*/
+ * Used by the {@link Config} object, EnterMode represents how content separated by a blank line will be html
+ * encoded inside the editor.  The default is paragraph mode ({@link #CKEDITOR_ENTER_P}).
+ *
+ * @author Bill Reh
+ */
 public enum EnterMode {
+    /** Paragraph mode.  Content separated by newline is enclosed in a &lt;p&gt;&lt;/p&gt; tag). */
     CKEDITOR_ENTER_P(1),
+    /** Break mode.  Content separated by newline is separated by a &lt;br/&gt; tag). */
     CKEDITOR_ENTER_BR(2),
+    /** Div mode.  Content separated by newline is enclosed in a &lt;div&gt;&lt;/div&gt; tag). */
     CKEDITOR_ENTER_DIV(3);
 
     private int val;
@@ -33,6 +37,11 @@ public enum EnterMode {
         this.val = val;
     }
 
+    /**
+     * Gets the numerical value that represents this EnterMode in the generated CKEDITOR.config file.
+     *
+     * @return The int representing this EnterMode.
+     */
     public int getValue() {
         return val;
     }

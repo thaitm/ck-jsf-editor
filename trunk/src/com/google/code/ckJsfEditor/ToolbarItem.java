@@ -18,9 +18,9 @@
 package com.google.code.ckJsfEditor;
 
 /**
- * User: billreh
- * Date: 9/17/11
- * Time: 5:29 PM
+ * The ToolbarItem enum represents the various buttons that can be put into the toolbar.
+ *
+ * @author Bill Reh
  */
 public enum ToolbarItem {
     SEPARATOR("-"),

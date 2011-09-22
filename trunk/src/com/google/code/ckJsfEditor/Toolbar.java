@@ -26,13 +26,21 @@ import static com.google.code.ckJsfEditor.ToolbarButtonGroup.*;
 
 
 /**
- * User: billreh
- * Date: 9/17/11
- * Time: 5:15 PM
+ * @author Bill Reh
  */
 public class Toolbar {
-    public static final Toolbar TOOLBAR_FULL = new Toolbar(DOCUMENT, CLIPBOARD, FORMS, BASIC_STYLES, PARAGRAPH,
-            LINKS, INSERT, ToolbarButtonGroup.STYLES, COLORS, TOOLS);
+    public static final Toolbar TOOLBAR_FULL = new Toolbar(
+            DOCUMENT,
+            CLIPBOARD,
+            FORMS,
+            BASIC_STYLES,
+            PARAGRAPH,
+            LINKS,
+            INSERT,
+            ToolbarButtonGroup.STYLES,
+            COLORS,
+            TOOLS
+    );
     public static final Toolbar TOOLBAR_BASIC = new Toolbar(
             new ToolbarButtonGroup()
                     .item(BOLD)
@@ -42,7 +50,7 @@ public class Toolbar {
                     .item(BULLETED_LIST)
                     .item(SEPARATOR)
                     .item(LINK)
-                    .item(ToolbarItem.UNLINK)
+                    .item(UNLINK)
                     .item(SEPARATOR)
                     .item(ABOUT)
     );
