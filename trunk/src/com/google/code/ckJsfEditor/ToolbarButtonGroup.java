@@ -44,6 +44,7 @@ import static com.google.code.ckJsfEditor.ToolbarItem.*;
  *              <span style="margin-left: 80px;">.item(PRINT)</span><br/>
  *              <span style="margin-left: 80px;">.item(SEPARATOR)</span><br/>
  *              <span style="margin-left: 80px;">.item(TEMPLATES);</span>
+ *
  *     </code>
  * </p>
  *

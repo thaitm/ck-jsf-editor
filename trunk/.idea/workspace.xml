@@ -24,16 +24,10 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="8f695adf-b29b-48c1-b4f2-5bb2070589ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javadoc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" readonly="true" id="8f695adf-b29b-48c1-b4f2-5bb2070589ed" name="Default" comment="Moving javadoc to the wiki area.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyle.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Config.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/EnterMode.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/EnterMode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Toolbar.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Toolbar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarItem.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarItem.java" />
     </list>
     <ignored path="ck-jsf-editor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -146,7 +140,7 @@
       <file leaf-file-name="ToolbarButtonGroup.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.5184744">
+            <state line="46" column="1" selection-start="2189" selection-end="2189" vertical-scroll-proportion="0.5184744">
               <folding />
             </state>
           </provider>
@@ -450,7 +444,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="1" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -504,50 +498,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ck-jsf-editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ck-jsf-editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ck-jsf-editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ck-jsf-editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ck-jsf-editor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="google" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckJsfEditor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -888,7 +838,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28790614" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -907,7 +857,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24252136" sideWeight="0.7590253" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24252136" sideWeight="0.7590253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24097472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.67057765" order="3" side_tool="false" content_ui="tabs" />
@@ -941,7 +891,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fixes and added documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started writing javadoc for the classes, and created javadoc directory to check in." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -957,6 +907,7 @@
     <MESSAGE value="Initial checkin." />
     <MESSAGE value="Small bug fixed in config.js that prevented a resource from loading.&#10;&#10;Documentation added to editor.js.&#10;" />
     <MESSAGE value="Small fixes and added documentation." />
+    <MESSAGE value="Started writing javadoc for the classes, and created javadoc directory to check in." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1115,7 +1066,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.5184744">
+        <state line="46" column="1" selection-start="2189" selection-end="2189" vertical-scroll-proportion="0.5184744">
           <folding />
         </state>
       </provider>
