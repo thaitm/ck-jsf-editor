@@ -1,4 +1,5 @@
-#summary A JSF component for ckeditor.
+#summary Tag information for the editor tag.
+
 = Introduction =
 
 ck-jsf-editor provides a JSF component for ckeditor.
