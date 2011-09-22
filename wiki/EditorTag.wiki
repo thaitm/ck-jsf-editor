@@ -24,8 +24,8 @@ The editor tag provides a JSF component for ckeditor.
 || requiredMessage || null || String || Message to display when the required field validation fails. ||
 || validator || null || MethodExpr || A method expression referring to a validation method with the signature with the signature `void methodName(FacesContext facesContext, UIComponent uiComponent, Object newValue)`. ||
 || validatorMessage || null || String || Message to display when validation fails. ||
-|| height || null || String || The desired height for the component, either as an int or an int with a css length unit (px, ex, em, in, pt, pc, mm, cm).  Bare ints are interpreted as px. ||
-|| width || null || String || The desired width for the component, either as a number or a number with a css length unit (px, ex, em, in, pt, pc, mm, cm).  Bare numberss are interpreted as px. ||
+|| height || null || String || The desired height for the component, either as a number or a number with a css length unit (px, ex, em, in, pt, pc, mm, cm).  Bare numbers are interpreted as px. ||
+|| width || null || String || The desired width for the component, either as a number or a number with a css length unit (px, ex, em, in, pt, pc, mm, cm).  Bare numbers are interpreted as px. ||
 || uiColor || null || String || The color to use for the overall theme of the editor's ui, ie #aed0ea ||
 || config || null || Config || An EL expression referring to a com.google.code.ckJsfEditor.Config object in your backing bean.  Used to configure the editor at initialization time. ||
 || toolbar || null || Object || Either the string "basic" for the basic toolbar, "full" for the full toolbar, or an EL reference to a com.google.code.ckJsfEditor.Toolbar object in your backing bean. ||
