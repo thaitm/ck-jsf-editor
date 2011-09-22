@@ -150,16 +150,10 @@
             <type>java.lang.String</type>
         </attribute>
         <attribute>
-            <description><![CDATA[Language to use.]]></description>
-            <name>lang</name>
-            <required>false</required>
-            <type>java.lang.String</type>
-        </attribute>
-        <attribute>
             <description><![CDATA[Editor config object.]]></description>
             <name>config</name>
             <required>false</required>
-            <type>net.tralfamadore.editor.Config</type>
+            <type>com.google.code.ckJsfEditor.Config</type>
         </attribute>
         <attribute>
             <description><![CDATA[Either the string "full", "basic", or an editor Toolbar object.]]></description>

@@ -21,9 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
-* User: billreh
-* Date: 9/17/11
-* Time: 4:59 PM
+ * @author Bill Reh
 */
 public class BasicStyle {
     private String element;

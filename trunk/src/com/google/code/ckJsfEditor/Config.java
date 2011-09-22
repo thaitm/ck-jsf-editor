@@ -24,10 +24,33 @@ import java.util.List;
 import java.util.Vector;
 
 /**
-* User: billreh
-* Date: 9/17/11
-* Time: 4:56 PM
-*/
+ * <p>
+ * A java object to represent the ckeditor configuration javascript object.  It is serialized to json and
+ * fed to the editor at startup time.
+ * </p>
+ *
+ * <p>
+ * Please see the ckeditor documentation at <a href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html">
+ * http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html</a> for details on what all of the options do.
+ * </p>
+ *
+ * <p>
+ * The object is designed so that you can use method chaining during creation.  For example:<br/>
+ * <code>
+ *     Config config = new Config().uiColor("#aed0ea").language("fr").width("500px");
+ * </code>
+ * </p>
+ * <p>
+ * This config object can now be bound to the tag like so:<br/>
+ * <code>
+ *     &lt;ck:editor value="#{editorBean.contents}" config="#{editorBean.config}"/&gt;
+ * </code>
+ * </p>
+ *
+ * Pretty printing can be turned on an off via the {@link #setPrettyPrint(boolean)} method.
+ *
+ * @author Bill Reh
+ */
 public class Config {
     private static final Gson gson = new Gson();
     private static final Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
@@ -190,6 +213,22 @@ public class Config {
 
     private transient boolean prettyPrint = false; // don't serialize this field to json via transient
 
+    /**
+     *
+     * @return true if this Config object is set to pretty print.
+     */
+    public boolean isPrettyPrint() {
+        return prettyPrint;
+    }
+
+    /**
+     * Set the Config object to pretty print or not, default is false.
+     *
+     * @param prettyPrint true to pretty print.
+     */
+    public void setPrettyPrint(boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+    }
 
     public Config autoGrowBottomSpace(Integer autoGrow_bottomSpace) {
         setAutoGrow_bottomSpace(autoGrow_bottomSpace);
@@ -2052,14 +2091,6 @@ public class Config {
 
     private void setWidth(String width) {
         this.width = width;
-    }
-
-    public boolean isPrettyPrint() {
-        return prettyPrint;
-    }
-
-    public void setPrettyPrint(boolean prettyPrint) {
-        this.prettyPrint = prettyPrint;
     }
 
     public String toJson() {
