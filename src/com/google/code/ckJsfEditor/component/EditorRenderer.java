@@ -80,7 +80,7 @@ public class EditorRenderer extends Renderer {
         responseWriter.endElement("script");
     }
 
-    private Config setConfigOptions(Editor editor, Config config) {
+    protected Config setConfigOptions(Editor editor, Config config) {
         if(config == null)
             config = new Config();
 
