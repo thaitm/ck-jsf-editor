@@ -3,7 +3,7 @@
 
 = Introduction =
 
-ck-jsf-editor provides a ckeditor JSF 2.0 component.  To use it you just need to include the jar file in your WEB-INF/lib directory, and import the tag namespace (http://code.google.com/ck-jsf-editor) in your html declaration.  As with any component, it must be enclosed in a form.
+ck-jsf-editor provides a ckeditor JSF 2.0 component.  To use it you just need to include the jar file in your WEB-INF/lib directory, and import the tag namespace (`http://code.google.com/ck-jsf-editor`) in your html declaration.  As with any component, it must be enclosed in a form.
 
 
 = Details =
