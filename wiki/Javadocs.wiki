@@ -1,3 +1,4 @@
 #summary Javadoc API
+#labels Featured,Phase-Implementation
 
 Javadocs are located here: [http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/index.html].
