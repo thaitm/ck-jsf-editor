@@ -1,4 +1,5 @@
 #summary Various ways to save editor content.
+#labels Featured,Phase-Implementation
 
 = Introduction =
 
