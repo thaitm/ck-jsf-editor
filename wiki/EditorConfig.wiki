@@ -9,4 +9,4 @@ Besides the basic editor tag attributes, the editor can be supplied with a Confi
 
 = Details =
 
-Lots of details to com on configuring.
+Lots of details to come on configuring.
