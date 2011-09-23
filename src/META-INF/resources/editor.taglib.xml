@@ -27,6 +27,7 @@
         <component>
             <component-type>Editor</component-type>
             <renderer-type>EditorRenderer</renderer-type>
+            <handler-class>com.google.code.ckJsfEditor.component.EditorHandler</handler-class>
         </component>
 
         <attribute>
@@ -160,6 +161,21 @@
             <name>toolbar</name>
             <required>false</required>
             <type>java.lang.Object</type>
+        </attribute>
+        <attribute>
+            <name>saveMethod</name>
+            <required>false</required>
+            <type>javax.el.MethodExpression</type>
+        </attribute>
+        <attribute>
+            <name>ajax</name>
+            <required>false</required>
+            <type>boolean</type>
+        </attribute>
+        <attribute>
+            <name>render</name>
+            <required>false</required>
+            <type>java.lang.String</type>
         </attribute>
     </tag>
 </facelet-taglib>

@@ -19,6 +19,7 @@ package com.google.code.ckJsfEditor.test;
 
 import com.google.code.ckJsfEditor.Config;
 import com.google.code.ckJsfEditor.Toolbar;
+import com.google.code.ckJsfEditor.component.SaveEvent;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -37,7 +38,6 @@ public class EditorTest {
     private Config config;
     private String editorContents;
     private String input;
-    private transient UIComponent binding;
 
     public EditorTest() {
         config = new Config().toolbar(Toolbar.TOOLBAR_FULL).customConfig("");
@@ -72,11 +72,8 @@ public class EditorTest {
         this.editorContents = editorContents;
     }
 
-    public UIComponent getBinding() {
-        return binding;
-    }
-
-    public void setBinding(UIComponent binding) {
-        this.binding = binding;
+    public void saveContents(SaveEvent event) {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        facesContext.addMessage(null, new FacesMessage("saving contents: " + event.getEditorData()));
     }
 }
