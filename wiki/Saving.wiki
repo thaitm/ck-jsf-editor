@@ -68,18 +68,3 @@ public class Bean {
 <ck:editor value="#{bean.editorContents}" ajax="false"/>
 ...
 }}}
-{{{
-@ManagedBean
-@RequestScoped
-public class Bean {
-    private String editorContents.
-
-    ... getter and setter
-
-    public String saveContents(SaveEvent event) {
-        FacesContext facesContext = FacesContext.getCurrentInstance();
-        facesContext.addMessage(null, new FacesMessage("saved: " + event.getEditorData()));
-        // note that editorContents is also updated at this point
-    }
-}
-}}}
