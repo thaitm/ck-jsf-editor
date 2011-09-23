@@ -83,16 +83,17 @@ function CKEditor(editorElement, config) {
     if(editorElement == null)
         return;
 
-    window.onload = function() {
-        if(config)
-            editor = CKEDITOR.replace(editorElement, config);
-        else
-            editor = CKEDITOR.replace(editorElement);
+    if(CKEDITOR.instances[editorElement] != null)
+        CKEDITOR.remove(CKEDITOR.instances[editorElement]);
 
-        editor.on('key', function(e) {
-            window.setTimeout(function() { _this.updateElement(); }, 50);
-        });
-    }
+    if(config)
+        editor = CKEDITOR.replace(editorElement, config);
+    else
+        editor = CKEDITOR.replace(editorElement);
+
+    editor.on('key', function(e) {
+        window.setTimeout(function() { _this.updateElement(); }, 50);
+    });
 }
 
 /**

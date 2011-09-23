@@ -24,10 +24,18 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="8f695adf-b29b-48c1-b4f2-5bb2070589ed" name="Default" comment="Moving javadoc to the wiki area.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javadoc" afterPath="" />
+    <list default="true" readonly="true" id="8f695adf-b29b-48c1-b4f2-5bb2070589ed" name="Default" comment="Fix for Issue 3 (http://code.google.com/p/ck-jsf-editor/issues/detail?id=3).&#10;&#10;Added">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/SaveEvent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jsf.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jsf.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/editor.js" afterPath="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/resources/editor.taglib.xml" afterPath="$PROJECT_DIR$/src/META-INF/resources/editor.taglib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorRenderer.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/test/EditorTest.java" afterPath="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/test/EditorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/editorTest.xhtml" afterPath="$PROJECT_DIR$/web/editorTest.xhtml" />
     </list>
     <ignored path="ck-jsf-editor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,93 +98,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="editorTest.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/editorTest.xhtml">
+      <file leaf-file-name="EditorHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1933" selection-end="1933" vertical-scroll-proportion="-23.125">
+            <state line="41" column="26" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1316583173000" expanded="true" signature="1283:1413" placeholder="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicStyle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyle.java">
+      <file leaf-file-name="SaveEvent.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/SaveEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="16" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="46" column="34" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicStyleOverride.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyleOverride.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Toolbar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Toolbar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="0" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolbarItem.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="1" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolbarButtonGroup.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="1" selection-start="2189" selection-end="2189" vertical-scroll-proportion="0.5184744">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InlineStyle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/InlineStyle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Editor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="66" column="29" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.20965692">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Config.java">
+      <file leaf-file-name="EditorRenderer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="18" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnterMode.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/EnterMode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
+            <state line="91" column="81" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,179 +143,28 @@
       <file leaf-file-name="editor.taglib.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/META-INF/resources/editor.taglib.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="8" selection-start="3569" selection-end="3569" vertical-scroll-proportion="0.0">
+            <state line="177" column="33" selection-start="7781" selection-end="7781" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/skins/kama/menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="49" selection-start="5616" selection-end="5616" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="richcombo.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/skins/kama/richcombo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="0" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toolbar.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/skins/kama/toolbar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="49" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dialog.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/dialog.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="730" column="46" selection-start="17233" selection-end="17233" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editor.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/editor.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="8" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elementspath.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/elementspath.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="icons.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/icons.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainui.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/mainui.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="49" selection-start="2630" selection-end="2630" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/menu.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="49" selection-start="5038" selection-end="5038" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="panel.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/panel.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="presets.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/presets.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reset.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/reset.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="richcombo.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/richcombo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="54" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templates.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/templates.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="toolbar.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/toolbar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="49" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="25" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="EditorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/test/EditorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0">
+            <state line="53" column="0" selection-start="1777" selection-end="1777" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/config.js">
+      <file leaf-file-name="editorTest.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/editorTest.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="14" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="34" column="35" selection-start="1480" selection-end="1480" vertical-scroll-proportion="-10.625">
+              <folding>
+                <marker date="1316771993000" expanded="true" signature="1758:1787" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -365,7 +172,7 @@
       <file leaf-file-name="editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="0" selection-start="3428" selection-end="3428" vertical-scroll-proportion="0.0">
+            <state line="88" column="0" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -385,22 +192,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/LICENSE.txt" />
-        <option value="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/CHANGES.html" />
         <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/web/editorTest.xhtml" />
-        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/test/EditorTest.java" />
         <option value="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/config.js" />
-        <option value="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/editor.js" />
-        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java" />
-        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorRenderer.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/resources/editor.taglib.xml" />
         <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Config.java" />
         <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/EnterMode.java" />
         <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyle.java" />
         <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Toolbar.java" />
         <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarItem.java" />
         <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java" />
+        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/SaveEvent.java" />
+        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/test/EditorTest.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/resources/editor.taglib.xml" />
+        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java" />
+        <option value="$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorRenderer.java" />
+        <option value="$PROJECT_DIR$/web/editorTest.xhtml" />
+        <option value="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/editor.js" />
       </list>
     </option>
   </component>
@@ -444,7 +251,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -459,7 +266,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -501,21 +308,139 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="google" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckJsfEditor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="google" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckJsfEditor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ck-jsf-editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="249" />
-    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="240" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="55" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="253" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -526,6 +451,7 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="207" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="1007" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="208" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -538,11 +464,11 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="DefaultHtmlFileTemplate" value="Xhtml" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
@@ -558,11 +484,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2" />
       <recent name="$PROJECT_DIR$/src/META-INF" />
       <recent name="$PROJECT_DIR$/src/META-INF/resources" />
-      <recent name="$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.google.code.ckJsfEditor.test" />
@@ -669,6 +595,18 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="FtpUpload" enabled="false">
+          <server_id />
+          <server_name />
+        </option>
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -692,18 +630,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="FtpUpload" enabled="false">
-          <server_id />
-          <server_name />
-        </option>
         <option name="Maven.BeforeRunTask" enabled="false" />
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -840,12 +766,11 @@
     <frame x="1920" y="0" width="1920" height="1200" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28790614" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28790614" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3998195" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -857,11 +782,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24252136" sideWeight="0.7590253" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24097472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24198718" sideWeight="0.7120939" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24097472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.67057765" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
@@ -891,7 +817,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started writing javadoc for the classes, and created javadoc directory to check in." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving javadoc to the wiki area." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -908,6 +834,7 @@
     <MESSAGE value="Small bug fixed in config.js that prevented a resource from loading.&#10;&#10;Documentation added to editor.js.&#10;" />
     <MESSAGE value="Small fixes and added documentation." />
     <MESSAGE value="Started writing javadoc for the classes, and created javadoc directory to check in." />
+    <MESSAGE value="Moving javadoc to the wiki area." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -951,123 +878,132 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/editorTest.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/presets.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1933" selection-end="1933" vertical-scroll-proportion="-23.125">
-          <folding>
-            <marker date="1316583173000" expanded="true" signature="1283:1413" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/EnterMode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="117" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/InlineStyle.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/richcombo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+        <state line="51" column="59" selection-start="1313" selection-end="1313" vertical-scroll-proportion="0.013562387">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyle.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/templates.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="16" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/skins/kama/toolbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="49" selection-start="879" selection-end="879" vertical-scroll-proportion="0.013562387">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="25" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.44280443">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="14" selection-start="2927" selection-end="2927" vertical-scroll-proportion="0.013562387">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jsf-api.jar!/javax/faces/component/StateHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.29139686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="26" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/SaveEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="34" selection-start="1542" selection-end="1542" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/editor.taglib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="33" selection-start="7781" selection-end="7781" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/EditorRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.0">
+        <state line="91" column="81" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/BasicStyleOverride.java">
+    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/test/EditorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+        <state line="53" column="0" selection-start="1777" selection-end="1777" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/web/editorTest.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="34" column="35" selection-start="1480" selection-end="1480" vertical-scroll-proportion="-10.625">
+          <folding>
+            <marker date="1316771993000" expanded="true" signature="1758:1787" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jsf.ui.FacesConfigEditorProvider">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="18" selection-start="2701" selection-end="2701" vertical-scroll-proportion="0.0">
+        <state line="88" column="0" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/Toolbar.java">
+    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/component/Editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/skins/kama/editor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="1" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/resources/com/google/code/ckJsfEditor/ckeditor-3.6.2/_source/core/skins/kama/mainui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/code/ckJsfEditor/ToolbarButtonGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="1" selection-start="2189" selection-end="2189" vertical-scroll-proportion="0.5184744">
-          <folding />
+        <state line="66" column="29" selection-start="2342" selection-end="2342" vertical-scroll-proportion="0.20965692">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1163,7 +1099,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>gson</last-edited>
+          <last-edited>jsf</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

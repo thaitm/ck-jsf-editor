@@ -23,7 +23,7 @@
   </component>
   <component name="IdProvider" IDEtalkID="09124F65F0847E38B2D7F81745E9E36A" />
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/javadoc" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../ck-jsf-editor-wiki/javadoc" />
     <option name="OPTION_SCOPE" value="protected" />
     <option name="OPTION_HIERARCHY" value="true" />
     <option name="OPTION_NAVIGATOR" value="true" />

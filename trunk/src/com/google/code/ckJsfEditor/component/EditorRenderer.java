@@ -20,7 +20,9 @@ package com.google.code.ckJsfEditor.component;
 import com.google.code.ckJsfEditor.Config;
 import com.google.code.ckJsfEditor.Toolbar;
 
+import javax.faces.FacesException;
 import javax.faces.component.UIComponent;
+import javax.faces.component.UIForm;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 import javax.faces.render.FacesRenderer;
@@ -75,9 +77,38 @@ public class EditorRenderer extends Renderer {
         responseWriter.write("var " + editor.resolveWidgetVar() + " = new CKEditor('" + editor.getClientId() + "'");
         if(config != null)
             responseWriter.write(", " + config.toJson());
-        responseWriter.write(");");
+        responseWriter.write(");\n");
+
+        if(editor.getSaveMethod() != null) {
+            encodeSaveMethod(responseWriter, editor);
+        } else if(editor.isAjax()) {
+            responseWriter.write("editor.getCommand('save').disable();\n");
+        }
 
         responseWriter.endElement("script");
+    }
+
+    public void encodeSaveMethod(ResponseWriter responseWriter, Editor editor) throws IOException {
+        String toRender = getClientIdsToRender(FacesContext.getCurrentInstance(), editor);
+        responseWriter.write("CKEDITOR.plugins.registered['save']= {\n" +
+                "    init : function( editor ) {\n" +
+                "        var command = editor.addCommand( 'save',\n" +
+                "            {\n" +
+                "                modes : { wysiwyg:1, source:1 },\n" +
+                "                exec : function( editor ) {\n" +
+                "                    clientId = editor.element.getId();\n");
+        if(editor.getRender() != null && !editor.getRender().isEmpty()) {
+                responseWriter.write("                    jsf.ajax.request(clientId, { type: 'save' }, { render: '" +
+                        toRender +  "' } );\n");
+        } else {
+            responseWriter.write("                    jsf.ajax.request(clientId, { type: 'save' });\n");
+        }
+        responseWriter.write("                }\n" +
+                "            }\n" +
+                "        );\n" +
+                "        editor.ui.addButton( 'Save',{label : 'Save',command : 'save'});\n" +
+                "    }\n" +
+                "}\n");
     }
 
     protected Config setConfigOptions(Editor editor, Config config) {
@@ -129,5 +160,49 @@ public class EditorRenderer extends Renderer {
             return null;
 
         return config;
+    }
+
+    protected static UIComponent findParentForm(UIComponent component) {
+        UIComponent parent = component.getParent();
+
+        while(parent != null) {
+            if(parent instanceof UIForm)
+                return parent;
+
+            parent = parent.getParent();
+        }
+
+        return null;
+    }
+
+    protected String getClientIdsToRender(FacesContext facesContext, Editor editor) {
+        String rawList = editor.getRender();
+
+        if(rawList == null)
+            return null;
+
+        StringBuilder buf = new StringBuilder();
+
+        String[] ids = rawList.split("[,\\s]+");
+        for(String id : ids) {
+            id = id.trim();
+            if(id.equals("@all") || id.equals("@none")) {
+                buf.append(id);
+            } else if(id.equals("@this")) {
+                buf.append(editor.getClientId(facesContext));
+            } else if(id.equals("@form")) {
+                UIComponent form = findParentForm(editor);
+                if(form == null)
+                    throw new FacesException("Component " + editor.getClientId() + " must be enclosed in a form");
+                buf.append(form.getClientId(facesContext));
+            } else {
+                UIComponent component = editor.findComponent(id);
+                if(component != null)
+                    buf.append(component.getClientId(facesContext));
+            }
+            buf.append(" ");
+        }
+
+        return buf.toString();
     }
 }

@@ -25,16 +25,35 @@
 <f:view contentType="text/html">
     <h:head>
         <title>CKEditor JSF Component Test</title>
+        <style type="text/css">
+            .messagesStyle {
+                background-color: #aed0ea;
+                border-radius: 10px;
+                display: inline-block;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                padding-right: 10px;
+            }
+            .buttonStyle {
+                background-color: #aed0ea;
+                border-radius: 10px;
+                padding: 5px;
+            }
+        </style>
     </h:head>
     <h:body>
         <h:form>
-            <h:messages id="messages" style="background-color: #aed0ea; border-radius: 10px; display: inline-block; padding-bottom: 5px; padding-top: 5px; padding-right: 10px;"/>
-            <ck:editor id="ckEd" value="#{editorTest.editorContents}" width="800px" widgetVar="eduardo" uiColor="#aed0ea"/>
+            <h:messages id="messages" styleClass="messagesStyle"/>
+
+            <ck:editor id="editor" value="#{editorTest.editorContents}" width="800px" widgetVar="eduardo"
+                       uiColor="#aed0ea" saveMethod="#{editorTest.saveContents}" render="messages"/>
+
             <h:commandButton value="Reset" onclick="eduardo.setContents(''); return false;" styleClass="buttonStyle"/>
-            <span style="width: 590px; height: 10px; min-width: 590px; min-height: 10px;">&#160;</span>
+
             <h:commandButton value="Save" actionListener="#{editorTest.save}">
-                <f:ajax render="messages" execute="ckEd"/>
+                <f:ajax render="@form" execute="editor"/>
             </h:commandButton>
+
         </h:form>
     </h:body>
 </f:view>

@@ -19,12 +19,15 @@ package com.google.code.ckJsfEditor.component;
 
 import com.google.code.ckJsfEditor.Config;
 
+import javax.el.MethodExpression;
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
 import javax.faces.component.FacesComponent;
 import javax.faces.component.UINamingContainer;
 import javax.faces.component.html.HtmlInputTextarea;
 import javax.faces.context.FacesContext;
+import javax.faces.event.AbortProcessingException;
+import javax.faces.event.FacesEvent;
 
 /**
  * User: billreh
@@ -47,9 +50,48 @@ public class Editor extends HtmlInputTextarea {
         extraPlugins,
         skin,
         toolbar,
-        config
+        config,
+        saveMethod,
+        ajax,
+        render
     }
 
+
+    @Override
+    public void queueEvent(FacesEvent event) {
+        FacesContext context = FacesContext.getCurrentInstance();
+        String eventName = context.getExternalContext().getRequestParameterMap().get("javax.faces.partial.event");
+
+        if("save".equals(eventName)) {
+            Editor editor = (Editor) event.getComponent();
+            super.queueEvent(new SaveEvent(event.getComponent(), editor.getValue().toString()));
+        } else {
+            super.queueEvent(event);
+        }
+    }
+
+    @Override
+    public void broadcast(FacesEvent event) throws AbortProcessingException {
+        super.broadcast(event);
+
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        MethodExpression method = getSaveMethod();
+
+        if(method != null && event instanceof SaveEvent) {
+            method.invoke(facesContext.getELContext(), new Object[] {((SaveEvent) event)});
+            FacesContext.getCurrentInstance().renderResponse();
+        }
+    }
+
+    public String resolveWidgetVar() {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        String widgetVar = (String) getAttributes().get("widgetVar");
+
+        if(widgetVar != null)
+            return widgetVar;
+        else
+            return "widget_" + getClientId(facesContext).replaceAll("-|" + UINamingContainer.getSeparatorChar(facesContext), "_");
+    }
 
     public String getWidgetVar() {
         return (String) getStateHelper().eval(PropertyKeys.widgetVar, null);
@@ -131,13 +173,27 @@ public class Editor extends HtmlInputTextarea {
         getStateHelper().put(PropertyKeys.config, config);
     }
 
-    public String resolveWidgetVar() {
-        FacesContext facesContext = FacesContext.getCurrentInstance();
-        String widgetVar = (String) getAttributes().get("widgetVar");
+    public MethodExpression getSaveMethod() {
+        return (MethodExpression) getStateHelper().eval(PropertyKeys.saveMethod, null);
+    }
 
-        if(widgetVar != null)
-            return widgetVar;
-        else
-            return "widget_" + getClientId(facesContext).replaceAll("-|" + UINamingContainer.getSeparatorChar(facesContext), "_");
+    public void setSaveMethod(MethodExpression saveMethod) {
+        getStateHelper().put(PropertyKeys.saveMethod, saveMethod);
+    }
+
+    public boolean isAjax() {
+        return (Boolean) getStateHelper().eval(PropertyKeys.ajax, true);
+    }
+
+    public void setAjax(boolean ajax) {
+        getStateHelper().put(PropertyKeys.ajax, ajax);
+    }
+
+    public String getRender() {
+        return (String) getStateHelper().eval(PropertyKeys.render, null);
+    }
+
+    public void setRender(String render) {
+        getStateHelper().put(PropertyKeys.render, render);
     }
 }
