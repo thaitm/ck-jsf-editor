@@ -2,7 +2,7 @@
 
 = Introduction =
 
-The editor component supports several variants of saving.  You can do it normally like you would in a textarea component and simple have a commandButton (ajax or no) to submit the component/editor.  Alternatively, you can hook the save up to the save button in the editor.
+The editor component supports several variants of saving.  You can do it normally like you would in a textarea component and simply have a commandButton (ajax or no) to submit the component/editor.  Alternatively, you can hook the save up to the save button in the editor.
 
 
 = Details =
