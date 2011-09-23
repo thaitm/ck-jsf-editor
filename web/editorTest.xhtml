@@ -51,7 +51,7 @@
             <h:commandButton value="Reset" onclick="eduardo.setContents(''); return false;" styleClass="buttonStyle"/>
 
             <h:commandButton value="Save" actionListener="#{editorTest.save}">
-                <f:ajax render="@form" execute="editor"/>
+                <f:ajax render="editor messages" execute="editor"/>
             </h:commandButton>
 
         </h:form>

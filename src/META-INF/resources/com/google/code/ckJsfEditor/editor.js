@@ -83,8 +83,10 @@ function CKEditor(editorElement, config) {
     if(editorElement == null)
         return;
 
-    if(CKEDITOR.instances[editorElement] != null)
-        CKEDITOR.remove(CKEDITOR.instances[editorElement]);
+    if(CKEDITOR.instances[editorElement] != null) {
+        var ed = CKEDITOR.instances[editorElement];
+        ed.destroy();
+    }
 
     if(config)
         editor = CKEDITOR.replace(editorElement, config);
