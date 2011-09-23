@@ -22,7 +22,7 @@ The editor tag provides a JSF component for ckeditor.
 || immediate || false || boolean || Whether or not process validations logic is executed at apply request values phase for this component. ||
 || required || false || boolean || Whether input in this component is required on submission. ||
 || requiredMessage || null || String || Message to display when the required field validation fails. ||
-|| validator || null || MethodExpr || A method expression referring to a validation method with the signature with the signature `void methodName(FacesContext facesContext, UIComponent uiComponent, Object newValue)`. ||
+|| validator || null || MethodExpression || A method expression referring to a validation method with the signature with the signature `void methodName(FacesContext facesContext, UIComponent uiComponent, Object newValue)`. ||
 || validatorMessage || null || String || Message to display when validation fails. ||
 || height || null || String || The desired height for the component, either as a number or a number with a css length unit (px, ex, em, in, pt, pc, mm, cm).  Bare numbers are interpreted as px. ||
 || width || null || String || The desired width for the component, either as a number or a number with a css length unit (px, ex, em, in, pt, pc, mm, cm).  Bare numbers are interpreted as px. ||
@@ -32,3 +32,6 @@ The editor tag provides a JSF component for ckeditor.
 || lang || null || String || The language for the editor to use. ||
 || cssContents || null || String || A comma separated list of css files to use in the content section of the editor ||
 || widgetVar || null || String || The name to use for the javascript widget which holds the editor instance ||
+|| saveMethod || null || MethodExpression || A method with the signature void methodName(SaveAction) that will be fired as an ajax submit when the save button in the editor is clicked. ||
+|| render || null || String || a comma or space separated list of client ids to update after receiving the ajax response from the saveMethod call ||
+|| ajax || true || boolean || Set to false to do a form submit when the save button is pressed in the editor ||
