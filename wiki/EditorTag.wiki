@@ -9,6 +9,7 @@ The editor tag provides a JSF component for ckeditor.
 || Tag || *editor* ||
 || Component Class || *[http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/Editor.html com.google.code.ckJsfEditor.component.Editor]* ||
 || Renderer Class || *[http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/EditorRenderer.html com.google.code.ckJsfEditor.component.EditorRenderer]* ||
+|| Handler Class || *[http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/EditorHandler.html com.google.code.ckJsfEditor.component.EditorHandler]* ||
 
 == Attributes ==
 || *Name* || *Default* || *Type* || *Description* ||
@@ -32,6 +33,6 @@ The editor tag provides a JSF component for ckeditor.
 || lang || null || String || The language for the editor to use. ||
 || cssContents || null || String || A comma separated list of css files to use in the content section of the editor ||
 || widgetVar || null || String || The name to use for the javascript widget which holds the editor instance ||
-|| saveMethod || null || MethodExpression || A method with the signature void methodName([file://localhost/Users/billreh/IdeaProjects/ck-jsf-editor-wiki/javadoc/com/google/code/ckJsfEditor/component/SaveEvent.html SaveEvent]) that will be fired as an ajax submit when the save button in the editor is clicked. ||
+|| saveMethod || null || MethodExpression || A method with the signature void methodName([http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/SaveEvent.html SaveEvent]) that will be fired as an ajax submit when the save button in the editor is clicked. ||
 || render || null || String || a comma or space separated list of client ids to update after receiving the ajax response from the saveMethod call ||
 || ajax || true || boolean || Set to false to do a form submit when the save button is pressed in the editor ||
