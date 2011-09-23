@@ -7,8 +7,8 @@ The editor tag provides a JSF component for ckeditor.
 
 == Info ==
 || Tag || *editor* ||
-|| Component Class || [http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/Editor.html *com.google.code.ckJsfEditor.component.Editor*] ||
-|| Renderer Class || [http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/EditorRenderer.html *com.google.code.ckJsfEditor.component.EditorRenderer*] ||
+|| Component Class || *[http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/Editor.html com.google.code.ckJsfEditor.component.Editor]* ||
+|| Renderer Class || *[http://ck-jsf-editor.googlecode.com/svn/wiki/javadoc/com/google/code/ckJsfEditor/component/EditorRenderer.html com.google.code.ckJsfEditor.component.EditorRenderer]* ||
 
 == Attributes ==
 || *Name* || *Default* || *Type* || *Description* ||
