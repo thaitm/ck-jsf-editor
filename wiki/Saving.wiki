@@ -69,3 +69,29 @@ public class Bean {
 <ck:editor value="#{bean.editorContents}" ajax="false"/>
 ...
 }}}
+
+
+== Fire a change listener on a form submit when the save button is clicked: ==
+{{{
+...
+<messages id="messages"/>
+
+<ck:editor value="#{bean.editorContents}" ajax="false" changeListener="#{bean.saveListener}"/>
+...
+}}}
+{{{
+@ManagedBean
+@RequestScoped
+public class Bean {
+    private String editorContents.
+
+    ... getter and setter
+
+    public String saveListener(ValueChangeEvent event) {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        facesContext.addMessage(null, new FacesMessage("old content: " + event.getOldValue()));
+        facesContext.addMessage(null, new FacesMessage("new content: " + event.getNewValue()));
+        // note that editorContents is also updated at this point
+    }
+}
+}}}
