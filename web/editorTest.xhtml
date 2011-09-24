@@ -46,7 +46,7 @@
             <h:messages id="messages" styleClass="messagesStyle"/>
 
             <ck:editor id="editor" value="#{editorTest.editorContents}" width="800px" widgetVar="eduardo"
-                       uiColor="#aed0ea" saveMethod="#{editorTest.saveContents}" render="messages"/>
+                       uiColor="#aed0ea" ajax="false" changeListener="#{editorTest.saveSubmitListener}"/>
 
             <h:commandButton value="Reset" onclick="eduardo.setContents(''); return false;" styleClass="buttonStyle"/>
 

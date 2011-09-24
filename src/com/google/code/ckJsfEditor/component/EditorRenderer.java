@@ -79,7 +79,7 @@ public class EditorRenderer extends Renderer {
             responseWriter.write(", " + config.toJson());
         responseWriter.write(");\n");
 
-        if(editor.getSaveMethod() != null) {
+        if(editor.getSaveMethod() != null && editor.isAjax()) {
             encodeSaveMethod(responseWriter, editor);
         } else if(editor.isAjax()) {
             responseWriter.write("editor.getCommand('save').disable();\n");

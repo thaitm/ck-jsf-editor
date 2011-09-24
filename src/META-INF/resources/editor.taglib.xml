@@ -168,6 +168,11 @@
             <type>javax.el.MethodExpression</type>
         </attribute>
         <attribute>
+            <name>changeListener</name>
+            <required>false</required>
+            <type>javax.el.MethodExpression</type>
+        </attribute>
+        <attribute>
             <name>ajax</name>
             <required>false</required>
             <type>boolean</type>
