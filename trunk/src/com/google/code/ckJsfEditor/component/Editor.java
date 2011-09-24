@@ -28,6 +28,7 @@ import javax.faces.component.html.HtmlInputTextarea;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AbortProcessingException;
 import javax.faces.event.FacesEvent;
+import javax.faces.event.ValueChangeEvent;
 
 /**
  * User: billreh
@@ -52,6 +53,7 @@ public class Editor extends HtmlInputTextarea {
         toolbar,
         config,
         saveMethod,
+        changeListener,
         ajax,
         render
     }
@@ -75,10 +77,14 @@ public class Editor extends HtmlInputTextarea {
         super.broadcast(event);
 
         FacesContext facesContext = FacesContext.getCurrentInstance();
-        MethodExpression method = getSaveMethod();
+        MethodExpression ajaxMethod = getSaveMethod();
+        MethodExpression submitMethod = getChangeListener();
 
-        if(method != null && event instanceof SaveEvent) {
-            method.invoke(facesContext.getELContext(), new Object[] {((SaveEvent) event)});
+        if(ajaxMethod != null && event instanceof SaveEvent) { // ajax
+            ajaxMethod.invoke(facesContext.getELContext(), new Object[]{((SaveEvent) event)});
+            FacesContext.getCurrentInstance().renderResponse();
+        } else if(submitMethod != null) { // form submit
+            submitMethod.invoke(facesContext.getELContext(), new Object[] {((ValueChangeEvent) event)});
             FacesContext.getCurrentInstance().renderResponse();
         }
     }
@@ -171,6 +177,14 @@ public class Editor extends HtmlInputTextarea {
 
     public void setConfig(Config config) {
         getStateHelper().put(PropertyKeys.config, config);
+    }
+
+    public MethodExpression getChangeListener() {
+        return (MethodExpression) getStateHelper().eval(PropertyKeys.changeListener, null);
+    }
+
+    public void setChangeListener(MethodExpression changeListener) {
+        getStateHelper().put(PropertyKeys.changeListener, changeListener);
     }
 
     public MethodExpression getSaveMethod() {

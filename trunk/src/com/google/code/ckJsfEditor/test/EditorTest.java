@@ -26,6 +26,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
+import javax.faces.event.FacesEvent;
+import javax.faces.event.ValueChangeEvent;
 
 /**
  * User: billreh
@@ -37,7 +39,6 @@ import javax.faces.context.FacesContext;
 public class EditorTest {
     private Config config;
     private String editorContents;
-    private String input;
 
     public EditorTest() {
         config = new Config().toolbar(Toolbar.TOOLBAR_FULL).customConfig("");
@@ -56,14 +57,6 @@ public class EditorTest {
         this.config = config;
     }
 
-    public String getInput() {
-        return input;
-    }
-
-    public void setInput(String input) {
-        this.input = input;
-    }
-
     public String getEditorContents() {
         return editorContents;
     }
@@ -75,5 +68,17 @@ public class EditorTest {
     public void saveContents(SaveEvent event) {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         facesContext.addMessage(null, new FacesMessage("saving contents: " + event.getEditorData()));
+    }
+
+    public void saveListener(FacesEvent event) {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        facesContext.addMessage(null, new FacesMessage("saving contents: " + getEditorContents()));
+    }
+
+
+    public void saveSubmitListener(ValueChangeEvent event) {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        facesContext.addMessage(null, new FacesMessage("old contents: " + event.getOldValue() + "\n" +
+                "new contents" + event.getNewValue()));
     }
 }
