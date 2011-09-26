@@ -25,7 +25,7 @@ CKEDITOR_GETURL = function( resource ) {
     var theResource;
     var jsfResource = resource;
     if ( jsfResource.indexOf(':/') == -1 && jsfResource.indexOf( '/' ) !== 0 ) {
-        jsfResource = this.basePath + 'javax.faces.resource';
+        jsfResource = CKEDITOR_BASEPATH + '/javax.faces.resource';
         i = resource.lastIndexOf('/')
         theResource = resource.substring(i);
         var thePath = resource.substring(0, i);
