@@ -20,15 +20,16 @@ package com.google.code.ckJsfEditor.component;
 import com.google.code.ckJsfEditor.Config;
 
 import javax.el.MethodExpression;
+import javax.faces.application.Application;
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
 import javax.faces.component.FacesComponent;
+import javax.faces.component.UIComponent;
 import javax.faces.component.UINamingContainer;
 import javax.faces.component.html.HtmlInputTextarea;
 import javax.faces.context.FacesContext;
-import javax.faces.event.AbortProcessingException;
-import javax.faces.event.FacesEvent;
-import javax.faces.event.ValueChangeEvent;
+import javax.faces.event.*;
+import java.util.List;
 
 /**
  * User: billreh
@@ -36,6 +37,7 @@ import javax.faces.event.ValueChangeEvent;
  * Time: 10:24 PM
  */
 @FacesComponent(value = "Editor")
+@ListenerFor(systemEventClass = PostAddToViewEvent.class)
 @ResourceDependencies({
         @ResourceDependency(library="com/google/code/ckJsfEditor", name="editor.js", target = "head"),
         @ResourceDependency(library="com/google/code/ckJsfEditor/ckeditor-3.6.2", name="ckeditor_source.js", target = "head")
@@ -58,6 +60,10 @@ public class Editor extends HtmlInputTextarea {
         render
     }
 
+    @Override
+    public void processEvent(ComponentSystemEvent event) throws AbortProcessingException {
+        addStyleResource(FacesContext.getCurrentInstance());
+    }
 
     @Override
     public void queueEvent(FacesEvent event) {
@@ -209,5 +215,22 @@ public class Editor extends HtmlInputTextarea {
 
     public void setRender(String render) {
         getStateHelper().put(PropertyKeys.render, render);
+    }
+
+    private void addStyleResource(FacesContext context) {
+        Application application = context.getApplication();
+        StyleResource styleResource = (StyleResource)
+                application.createComponent(context, "StyleResource", "StyleResourceRenderer");
+        context.getViewRoot().addComponentResource(context, styleResource, "head");
+        List<UIComponent> resources = context.getViewRoot().getComponentResources(context, "head");
+        UIComponent rem = null;
+        for(UIComponent resource : resources) {
+            if(resource.getClientId(context).equals(styleResource.getClientId())) {
+                rem = resource;
+                break;
+            }
+        }
+        resources.remove(rem);
+        resources.add(0, styleResource);
     }
 }
