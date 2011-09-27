@@ -29,4 +29,20 @@ import javax.servlet.http.HttpServletRequest;
  */
 @FacesComponent(value = "StyleResource")
 public class StyleResource extends UIOutput {
+    protected enum PropertyKeys {
+        name
+    }
+
+    public StyleResource() {
+        setName("inline.js");
+    }
+
+
+    public String getName() {
+        return (String) getStateHelper().eval(PropertyKeys.name, null);
+    }
+
+    public void setName(String name) {
+        getStateHelper().put(PropertyKeys.name, name);
+    }
 }
