@@ -74,13 +74,13 @@ public class EditorRenderer extends Renderer {
 
         responseWriter.startElement("script", editor);
 		responseWriter.writeAttribute("type", "text/javascript", null);
-        if(editor.getContentCss() != null && !editor.getContentCss().trim().isEmpty()) {
-            responseWriter.write("        CKEDITOR.on('instanceCreated', function(e) {\n" +
-                    "            var ed = e.editor;\n" +
-                    "            ed._.styles = [];\n" +
-                    "            ed.addCss(\"" + editor.getContentCss() + "\");\n" +
-                    "        });\n");
-        }
+        if(editor.getContentCss() == null)
+            editor.setContentCss("");
+        responseWriter.write("        CKEDITOR.on('instanceCreated', function(e) {\n" +
+                "            var ed = e.editor;\n" +
+                "            ed._.styles = [];\n" +
+                "            ed.addCss(\"" + editor.getContentCss() + "\");\n" +
+                "        });\n");
         responseWriter.write("var " + editor.resolveWidgetVar() + " = new CKEditor('" + editor.getClientId() + "'");
         if(config != null)
             responseWriter.write(", " + config.toJson());
