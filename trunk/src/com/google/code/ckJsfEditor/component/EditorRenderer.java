@@ -74,6 +74,13 @@ public class EditorRenderer extends Renderer {
 
         responseWriter.startElement("script", editor);
 		responseWriter.writeAttribute("type", "text/javascript", null);
+        if(editor.getContentCss() != null && !editor.getContentCss().trim().isEmpty()) {
+            responseWriter.write("        CKEDITOR.on('instanceCreated', function(e) {\n" +
+                    "            var ed = e.editor;\n" +
+                    "            ed._.styles = [];\n" +
+                    "            ed.addCss(\"" + editor.getContentCss() + "\");\n" +
+                    "        });\n");
+        }
         responseWriter.write("var " + editor.resolveWidgetVar() + " = new CKEditor('" + editor.getClientId() + "'");
         if(config != null)
             responseWriter.write(", " + config.toJson());
@@ -82,7 +89,7 @@ public class EditorRenderer extends Renderer {
         if(editor.getSaveMethod() != null && editor.isAjax()) {
             encodeSaveMethod(responseWriter, editor);
         } else if(editor.isAjax()) {
-            responseWriter.write("editor.getCommand('save').disable();\n");
+            responseWriter.write("window.setTimeout(function() { " + editor.resolveWidgetVar() + ".disableSaveButton(); }, 500);\n");
         }
 
         responseWriter.endElement("script");

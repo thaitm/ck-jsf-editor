@@ -46,13 +46,14 @@
             <h:messages id="messages" styleClass="messagesStyle"/>
 
             <ck:editor id="editor" value="#{editorTest.editorContents}" width="800px" widgetVar="eduardo"
-                       uiColor="#aed0ea" ajax="false" changeListener="#{editorTest.saveSubmitListener}"/>
+                       uiColor="#aed0ea" saveMethod="#{editorTest.saveContents}" render="messages editor"/>
 
             <h:commandButton value="Reset" onclick="eduardo.setContents(''); return false;" styleClass="buttonStyle"/>
 
-            <h:commandButton value="Save" actionListener="#{editorTest.save}">
+            <h:commandButton value="Save" actionListener="#{editorTest.save}" styleClass="buttonStyle">
                 <f:ajax render="editor messages" execute="editor"/>
             </h:commandButton>
+            <h:commandButton onclick="eduardo.disableSaveButton(); return false;" styleClass="buttonStyle" value="Disble Save"/>
 
         </h:form>
     </h:body>
