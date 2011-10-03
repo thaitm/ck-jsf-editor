@@ -201,3 +201,24 @@ CKEditor.prototype.insertElement = function(element) {
 CKEditor.prototype.updateElement = function() {
     this.getEditor().updateElement();
 };
+
+CKEditor.prototype.disableSaveButton = function() {
+    var save_cmd = this.getEditor().getCommand('save');
+    if(save_cmd == null) {
+        CKEDITOR.plugins.registered['Save']= {
+            init : function( editor ) {
+                var command = editor.addCommand( 'save',
+                    {
+                        modes : { wysiwyg:1, source:1 },
+                        exec : function( editor ) {
+                            clientId = editor.element.getId();
+                        }
+                    });
+                command.disable();
+                editor.ui.addButton( 'save',{label : 'Save',command : 'save'});
+            }
+        };
+    } else {
+        save_cmd.disable();
+    }
+};

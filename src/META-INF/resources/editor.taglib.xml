@@ -134,7 +134,7 @@
         </attribute>
         <attribute>
             <description><![CDATA[Comma separated list of css files to use inside the editor.]]></description>
-            <name>contentsCss</name>
+            <name>contentCss</name>
             <required>false</required>
             <type>java.lang.String</type>
         </attribute>

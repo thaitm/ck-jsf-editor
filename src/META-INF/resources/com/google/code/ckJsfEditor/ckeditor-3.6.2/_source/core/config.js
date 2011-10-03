@@ -95,7 +95,7 @@ CKEDITOR.config =
      * Change the resource url to work with jsf resource loading.
      *
      */
-	contentsCss : CKEDITOR.basePath + 'javax.faces.resource/contents.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2',
+	contentsCss : CKEDITOR.basePath + '/javax.faces.resource/contents.css.jsf?ln=com/google/code/ckJsfEditor/ckeditor-3.6.2',
 
 	/**
 	 * The writing direction of the language used to create the editor

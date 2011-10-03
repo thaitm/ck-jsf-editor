@@ -80,5 +80,6 @@ public class EditorTest {
         FacesContext facesContext = FacesContext.getCurrentInstance();
         facesContext.addMessage(null, new FacesMessage("old contents: " + event.getOldValue() + "\n" +
                 "new contents" + event.getNewValue()));
+        editorContents = event.getNewValue().toString();
     }
 }
